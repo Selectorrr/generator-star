@@ -22,7 +22,7 @@ module.exports = generators.Base.extend({
         );
         this.fs.copyTpl(
             this.templatePath('index.js'),
-            this.destinationPath(that.nameKebab + '/' + that.nameKebab + '.index.js'),
+            this.destinationPath(that.nameKebab + '/index.js'),
             {nameCamel: that.nameCamel, nameKebab: that.nameKebab, nameCap: that.nameCap}
         );
         this.fs.copyTpl(
@@ -33,6 +33,16 @@ module.exports = generators.Base.extend({
         this.fs.copyTpl(
             this.templatePath('tmpl.html'),
             this.destinationPath(that.nameKebab + '/' + that.nameKebab + '.tmpl.html'),
+            {nameCamel: that.nameCamel, nameKebab: that.nameKebab, nameCap: that.nameCap}
+        );
+        this.fs.copyTpl(
+            this.templatePath('stylesheet.css'),
+            this.destinationPath(that.nameKebab + '/' + that.nameKebab + '.css'),
+            {}
+        );
+        this.fs.copyTpl(
+            this.templatePath('readme.md'),
+            this.destinationPath(that.nameKebab + '/readme.md'),
             {nameCamel: that.nameCamel, nameKebab: that.nameKebab, nameCap: that.nameCap}
         );
     }

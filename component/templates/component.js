@@ -2,6 +2,7 @@
 
 import module from './<%= nameKebab %>.module';
 import ctrlName from './<%= nameKebab %>.ctrl';
+import './<%= nameKebab %>.css';
 
 /**
  * <%= nameKebab %> component definition.
